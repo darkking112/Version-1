@@ -1,14 +1,9 @@
+
 const mysql = require('mysql2')
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "blood_donation",
-    port: "3307",
-    timezone: 'Z'
-    // multipleStatements: true
-})
+const urlDB = `mysql://root:FvsbhzINapvigkRmEMgKNVHEMuPoVKGv@monorail.proxy.rlwy.net:15982/railway`;
+
+const db = mysql.createConnection(urlDB, {timezone: 'Z'})
 db.connect((err) => {
     if (err)
         return console.log(err);
