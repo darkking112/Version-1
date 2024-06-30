@@ -34,7 +34,7 @@ function Signup() {
         }
 
         try {
-        const response = await fetch('http://localhost:5000/donor/signup', {
+        const response = await fetch('http://version-1-production.up.railway.app/donor/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

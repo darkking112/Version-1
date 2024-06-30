@@ -11,7 +11,7 @@ function BookAppointmentRow({donor}) {
         setShowBookNow(false);
         setBookNowClicked(true);
         try {
-            const response = await fetch('http://localhost:5000/donor/view-donation-centers-list');
+            const response = await fetch('http://version-1-production.up.railway.app/donor/view-donation-centers-list');
             const data = await response.json();
             setDonationCenters(data);
         } catch (error) {
