@@ -28,9 +28,9 @@ const signup = async (req, res) => {
         const isValid = await validateEmail(email);
         if (isValid) {
             const userId = await insertUser(email, password);
-            const query = "INSERT INTO donor (Donor_Name, Donor_Age, Donor_Email, Donor_Password, Phone_Number, Gender, Nationality, IC_Number, User_ID)"
+            const query = "INSERT INTO donor (Donor_Name, Donor_Age, Blood_Type, Donor_Email, Donor_Password, Phone_Number, Gender, Nationality, IC_Number, User_ID)"
                         + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-            const values = [name, age, email, password, phoneNo, gender, nationality, ic, userId];
+            const values = [name, age, ' ', email, password, phoneNo, gender, nationality, ic, userId];
             const result = await db.promise().query(query, values);
             if (result[0].insertId)
                 return res.json("Account Created Successfully");
