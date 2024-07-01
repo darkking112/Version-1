@@ -14,7 +14,7 @@ function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
+        const response = await fetch(`https://version-1-production.up.railway.app//auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

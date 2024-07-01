@@ -16,7 +16,7 @@ function NurseHomePage() {
     const nurse = location.state ? location.state.user : null;
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/nurse/appointment-list`, {
+        fetch(`https://version-1-production.up.railway.app//nurse/appointment-list`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
