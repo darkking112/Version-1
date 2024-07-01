@@ -20,6 +20,7 @@ function Login() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email: email, password: password }),
+            referrerPolicy: "unsafe-url"
         });
 
         const data = await response.json();
