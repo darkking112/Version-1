@@ -10,7 +10,7 @@ function Login() {
     const [showForm, setShowForm] = useState(true);
     const [password, setPassword] = useState("");
     const [showErrorDialog, setShowErrorDialog] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
