@@ -13,7 +13,7 @@ const approveAppointment = async function (req, res) {
     const { type, amount, donorID } = req.body;
     const expiryDate = calculateDate();
     const updateQuery = "UPDATE `appointment` SET Appointment_Status = 'Confirmed' WHERE Appointment_ID = ?;";
-    const insertQuery = "INSERT INTO blood_unit (Type, Amount, Expiry_Date, Donor_ID, Appointment_ID) "
+    const insertQuery = "INSERT INTO blood_unit2 (Type, Amount, Expiry_Date, Donor_ID, Appointment_ID) "
                         + "VALUES (?, ?, ?, ?, ?);";
     const values = [type, amount, expiryDate, donorID, id];
     
